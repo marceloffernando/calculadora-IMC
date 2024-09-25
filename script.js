@@ -25,15 +25,15 @@ form.addEventListener("submit", function(e){
   
 });
 
-function getImc (peso, altura){  
+function getImc (peso, altura){  //função para o calculo do IMC
     const imc = peso / altura ** 2;
     return imc.toFixed(2);
 }
-function getnivelImc(imc){ 
+function getnivelImc(imc){  //função de nivel do IMC
     const nivel = ['abaixo do peso', 'peso normal', 'sobrepeso', 'obesidade grau 1', 'obesidade grau 2', 'obesidade grau 3']
     if(imc >= 39.9){
         return nivel[5]
-    } else if(imc >= 34.9){ 
+    } else if(imc >= 34.9){ //qundo tiver(return) não precisa colocar else
         return nivel[4]
     }if(imc >= 29.9){
         return nivel[3]
@@ -45,7 +45,7 @@ function getnivelImc(imc){
         return nivel[0]
     }
 }
-function criap(){ 
+function criap(){  // função para criar um paragrafo
     const p = document.createElement('p');
     return p;
 }
@@ -57,3 +57,20 @@ function setResultado(msg, isValid){
     p.innerHTML = msg
     resultado.appendChild(p)
 }
+
+
+
+
+
+
+/* 
+function calcular(){
+    let peso = document.querySelector('#peso')
+    let altura = document.querySelector('#altura')
+    let resultado = document.querySelector('#resultado')
+    let p = Number(peso.value)
+    let a = Number(altura.value)
+    let soma = p  + a; 
+    resultado.innerHTML = soma
+}
+*/
